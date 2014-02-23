@@ -40,3 +40,8 @@ randomizer.py
 indivnames.py
 
     Makes file of individual's names for use in other scripts
+    
+samplebashbeagle
+
+    sample input for running beagle on farm
+    make sure to specify CPUs with -c X where here, X is 10
