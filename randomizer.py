@@ -1,4 +1,4 @@
-#hapmap1.py
+#randomizer.py
 #simple script to choose 10k random hapmap lines from a larger file
 #by tkent feb 2014
 
