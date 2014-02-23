@@ -45,3 +45,4 @@ samplebashbeagle
 
     sample input for running beagle on farm
     make sure to specify CPUs with -c X where here, X is 10
+    -Djava option changes temp directory to one with plenty of space
