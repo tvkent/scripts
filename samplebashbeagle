@@ -6,4 +6,4 @@
 set -e
 set -u
 
-java -Xmx80000m -jar beagle.jar unphased=/home/tvkent/projects/beagle/chr8f.gz missing=N fastibdthreshold=1e-10 fastibd=true out=/home/tvkent/projects/beagle/Pvale-10/chr8out
+java -Djava.io.tmpdir=/home/tvkent/temp -Xmx80000m -jar beagle.jar unphased=/home/tvkent/projects/beagle/chr8f.gz missing=N fastibdthreshold=1e-10 fastibd=true out=/home/tvkent/projects/beagle/Pvale-10/chr8out
