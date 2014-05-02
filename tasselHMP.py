@@ -56,6 +56,16 @@ def Insert_Line(jiao,ames,Jiao,Ames,jiaokeys,ameskeys,finalkeys):
             for i in range(len(length)-11):
                 outfile.write('N\t')
             outfile.write('\n')
+        if key in jiaokeys:
+            entries=Jiao.get(str(key))
+            line='\t'.join(entries)
+            outfile2.write(line+'\n')
+        if key not in jiaokeys:
+            length=jiao[0].split()
+            outfile2.write('ZMLCHR10N\t'+'NA\t'+'10\t'+str(key)+'\t'+'+\t'+'NA\t'+'NA\t'+'NA\t'+'NA\t$
+            for i in range(len(length)-11):
+                outfile2.write('NN\t')
+            outfile2.write('\n')
 
 jiao='Jiao_ch10.hmp.txt' #file for donor creation
 ames='AmesUSInbreds_AllZeaGBSv1.0_imputed-130508/AmesUSInbreds_AllZeaGBSv1.0_imputed_20130508_chr10.hmp.txt' #file to be imputed
