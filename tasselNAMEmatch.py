@@ -49,16 +49,16 @@ def Percent(jiao,ames,matches,matcheskeys,nonmatches):
         top=0
         bottom=0
         for item in jiaocol:
-            jiaohap=jiaocol[count] #one by one haplotype in match column
-            jiaohap=jiaohap[0] #jiao set has genotype?
-            
-            if amescol[count]!='N': #don't need to compare missing data--->noisy
-                bottom+=1
-                if jiaohap==amescol[count]:
-                    top+=1
-            count+=1
-        
-        
+            if item!='NN':
+                jiaohap=jiaocol[count] #one by one haplotype in match column
+                jiaohap=jiaohap[0] #jiao set has genotype?
+
+                if amescol[count]!='N': #don't need to compare missing data--->noisy
+                        bottom+=1
+                        if jiaohap==amescol[count]:
+                                top+=1
+                count+=1
+
         ratio=(str(top)+'/'+str(bottom)) #ratio of matches excluding missing data in ames
         outfile.write(str(key)+'\t'+str(values[0])+'\t'+str(ratio)+'\n')
     for item in nonmatches:
